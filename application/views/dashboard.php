@@ -53,7 +53,7 @@
 		</nav>
 		<div class="row">
   <div class="col-sm-6 col-md-5 col-lg-6"></div>
-  <div class="col-sm-6 col-md-5 col-md-offset-2 col-lg-6 col-lg-offset-10"><button type="button" class="btn btn-primary">Add User</button></div>
+  <div class="col-sm-6 col-md-5 col-md-offset-2 col-lg-6 col-lg-offset-10"><a href="/users/new/"<button type="button" class="btn btn-primary">Add User</button></a></div>
 </div>
 		<div class="row">
 		<div class= ".col-md-4">
@@ -68,7 +68,7 @@
 				</thead>
 				<tr>
 					<td>1</td>
-					<td>Michael Weitzman</td>
+					<td><a href="/users/show/">Michael Weitzman</a></td>
 					<td>michael.weitzman@wst.com</td>
 					<td>Feb. 2nd 2015</td>
 					<td>admin</td>

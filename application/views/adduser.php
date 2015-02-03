@@ -30,7 +30,9 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
+        <li class=""><a href="#">Home <span class="sr-only"></span></a></li>
+        <li class=""><a href="#">Dashboard<span class="sr-only"></span></a></li>
+        <li class="active"><a href="#">Profile <span class="sr-only">(current)</span></a></li>
        <!--  <li><a href="#">Link</a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
@@ -52,32 +54,37 @@
   </div><!-- /.container-fluid -->
 
 </nav>
- <div class="col-md-4">
-  <h3>Register</h3>
-	<form action="/users/register/" method="post">
-  <div class="form-group">
-    <label for="exampleInputEmail1">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-  </div>  
-  <div class="form-group">
-    <label for="registerFirstName">First Name</label>
-    <input type="text" class="form-control" id="registerName" placeholder="Enter First Name">
-  </div><div class="form-group">
-    <label for="registerLastName">Last Name</label>
-    <input type="text" class="form-control" id="RegisterLastName" placeholder="Enter Last Name">
-  <div class="form-group">
-    <label for="registerPassword">Password</label>
-    <input type="password" class="form-control" id="registerPassword" placeholder="Password">
-  </div>
-  <div class="form-group">
-    <label for="registerConfirmPassword">Confirm Password</label>
-    <input type="password" class="form-control" id="registerConfirmPassword" placeholder="Password">
-  </div>
-  <button type="submit" class="btn btn-default">Submit</button>
-  <input type ="hidden" name ="action_reg" value="register">
-</form>
-</div>
-</div>
+	<div class="row">
+	<div class="col-sm-6 col-md-5 col-lg-6"></div>
+	  <div class="col-sm-6 col-md-5 col-md-offset-2 col-lg-6 col-lg-offset-10"><a href="/dashboard/"<button type="button" class="btn btn-primary">Return to Dashboard</button></a></div>
+	</div>
+	<div class="row">
+		 <div class="col-md-4">
+		  <h3>Add New User</h3>
+			<form action="/users/new/" method="post">
+			  <div class="form-group">
+			    <label for="exampleInputEmail1">Email address</label>
+			    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+			  </div>  
+			  <div class="form-group">
+			    <label for="registerFirstName">First Name</label>
+			    <input type="text" class="form-control" id="registerName" placeholder="Enter name">
+			  </div><div class="form-group">
+			    <label for="registerLastName">Last Name</label>
+			    <input type="text" class="form-control" id="RegisterLastName" placeholder="Enter email">
+			  <div class="form-group">
+			    <label for="registerPassword">Password</label>
+			    <input type="password" class="form-control" id="registerPassword" placeholder="Enter email">
+			  </div>
+			  <div class="form-group">
+			    <label for="registerConfirmPassword">Confirm Password</label>
+			    <input type="password" class="form-control" id="registerConfirmPassword" placeholder="Password">
+			  </div>
+			  <button type="submit" class="btn btn-default">Create</button>
+			  <input type ="hidden" name ="action_reg" value="register">
+			</form>
+		</div>
+	</div>
 
 </div>
 
