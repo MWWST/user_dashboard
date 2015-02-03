@@ -31,7 +31,7 @@
 		      <ul class="nav navbar-nav">
 		        <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
 		        <li><a href="#">Dashboard</a></li> 
-		        <li><a href="/edit/user/">Profile</a></li>
+		        <li><a href="#">Profile</a></li>
 		        <!-- <li class="dropdown">
 		          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
 		          <ul class="dropdown-menu" role="menu">
@@ -53,7 +53,7 @@
 		</nav>
 		<div class="row">
   <div class="col-sm-6 col-md-5 col-lg-6"></div>
-  <div class="col-sm-6 col-md-5 col-md-offset-2 col-lg-6 col-lg-offset-10"></div>
+  <div class="col-sm-6 col-md-5 col-md-offset-2 col-lg-6 col-lg-offset-10"><a href="/users/new/"<button type="button" class="btn btn-primary">Add User</button></a></div>
 </div>
 		<div class="row">
 		<div class= ".col-md-4">
@@ -64,6 +64,7 @@
 					<th>email</th>
 					<th>created_at</th>
 					<th>user_level</th>
+					<th>actions</th>
 				</thead>
 				<tr>
 					<td>1</td>
@@ -71,6 +72,7 @@
 					<td>michael.weitzman@wst.com</td>
 					<td>Feb. 2nd 2015</td>
 					<td>admin</td>
+					<td><a href="/edit/users/admin">edit</a> <a href="/user/delete">remove</a></td>
 				</tr>
 				<tr>
 					<td>3</td>
@@ -78,6 +80,7 @@
 					<td>jimmy.jun@gmail.com</td>
 					<td>Feb. 2nd 2015</td>
 					<td>normal</td>
+					<td><a href="/edit/users/admin">edit</a> <a href="/user/delete">remove</a></td>
 				</tr>
 				<tr>
 					<td>3</td>
@@ -85,6 +88,7 @@
 					<td>paulie@gmail.com</td>
 					<td>Feb. 2nd 2015</td>
 					<td>admin</td>
+					<td><a href="/edit/users/admin">edit</a> <a href="/user/delete">remove</a></td>
 				</tr>
 				<tr>
 					<td>4</td>
@@ -92,6 +96,7 @@
 					<td>matt@gmail.com</td>
 					<td>Feb. 2nd 2015</td>
 					<td>normal</td>
+					<td><a href="/edit/users/admin">edit</a> <a href="/user/delete">remove</a></td>
 				</tr>
 			</table>
 		</div>

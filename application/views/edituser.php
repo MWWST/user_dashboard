@@ -1,7 +1,8 @@
 <?php ?>
+
 <html>
 <head>
-	<title>WodRover user dashboard</title>
+	<title>Edit User</title>
 
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
@@ -11,6 +12,28 @@
 
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>	
+<style type="text/css">
+
+textarea {
+	width:100%;
+	height: 12%;
+}
+
+button.btn-success {
+	margin-left: 95%;
+	margin-top: 1%;
+}
+
+.message {
+	font-size: 1em;
+	border:2px solid black;
+	width:90%;
+	margin-bottom: 2%;
+	padding:20px;
+}
+
+
+</style>
 </head>
 <body>
 	<div class= "container">
@@ -30,7 +53,7 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
+        <li class="active"><a href="/">Home <span class="sr-only">(current)</span></a></li>
        <!--  <li><a href="#">Link</a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
@@ -52,34 +75,53 @@
   </div><!-- /.container-fluid -->
 
 </nav>
- <div class="col-md-4">
-  <h3>Register</h3>
-	<form action="/users/register/" method="post">
+
+	<div class="row">
+		<h2>Edit Profile</h2>
+	<div class="col-sm-6 col-md-5 col-lg-6">
+		<h4>Edit Information</h4>
+		<form>
   <div class="form-group">
-    <label for="exampleInputEmail1">Email address</label>
-    <input type="email" class="form-control" id="registerEmail" name ="reg_email" placeholder="Enter email">
-  </div>  
-  <div class="form-group">
-    <label for="registerFirstName">First Name</label>
-    <input type="text" class="form-control" id="registerName" name ="reg_f_name" placeholder="Enter First Name">
-  </div><div class="form-group">
-    <label for="registerLastName">Last Name</label>
-    <input type="text" class="form-control" id="RegisterLastName" name ="reg_l_name" placeholder="Enter Last Name">
-  <div class="form-group">
-    <label for="registerPassword">Password</label>
-    <input type="password" class="form-control" id="registerPassword" name ="reg_pw" placeholder="Password">
+    <label for="update_email">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
   </div>
   <div class="form-group">
-    <label for="registerConfirmPassword">Confirm Password</label>
-    <input type="password" class="form-control" id="registerConfirmPassword" name ="reg_pw_confirm" placeholder="Password">
+    <label for="update_first_name">First Name</label>
+    <input type="password" class="form-control" id="update_first_name" placeholder="First Name">
   </div>
-  <button type="submit" class="btn btn-default">Submit</button>
-  <input type ="hidden" name ="action_reg" value="register">
+  <div class="form-group">
+    <label for="update_last_name">Last Name</label>
+    <input type="password" class="form-control" id="update_first_name" placeholder="Last Name">
+  </div>
+  <button type="submit" class="btn btn-default">Save</button>
 </form>
+	</div>
+	  <div class="col-sm-6 col-md-5 col-lg-6">
+	  	<h4>Update Password</h4>
+<form>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Password</label>
+    <input type="password" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password confirmation</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+  </div>
+  <button type="submit" class="btn btn-default">save</button>
+</form>
+	  </div>
+	</div>
+	<div class="row">
+		 <div class="col-sm-6 col-md-12  col-lg-12"><form action="/messages/new" method="post">
+		 	<p><label for="message">Edit Description</label></p>
+		 	<textarea name="message"></textarea>
+	 		<button type ="submit" name="message" value="Post" class="btn btn-success">Save</button>
+	 		<input type ="hidden" name ="msg" value="msgpost">
+	 	</form>
+		 </div>
+	</div>
+	 	
+	</div>
 </div>
-</div>
-
-</div>
-
 </body>
 </html>
