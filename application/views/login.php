@@ -24,7 +24,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Dashboard</a>
+      <a class="navbar-brand" href="/">Dashboard</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -53,19 +53,20 @@
 
 </nav>
  <div class="col-md-4">
-	<form action ="users/login" method="post">
+	<form action ="/users/login" method="post">
   <div class="form-group">
-    <label for="exampleInputEmail1">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+    <label for="login_email">Email address</label>
+    <input type="email" class="form-control" id="login_email" name="login_email" placeholder="Enter email">
   </div>
   <div class="form-group">
-    <label for="exampleInputPassword1">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+    <label for="login_password">Password</label>
+    <input type="password" class="form-control" id="login_password" name="login_password" placeholder="Password">
   </div>
   <div class="form-group">
     <p class="help-block">Don't have an account? <a href="/register/">Register</a></p>
   </div>
   <button type="submit" class="btn btn-default">Submit</button>
+  <input type="hidden" name="login" value="user_login">
 </form>
 </div>
 

@@ -36,6 +36,15 @@ button.btn-success {
 	padding:20px;
 }
 
+.comment {
+	font-size: 1em;
+	width:70%;
+	margin-bottom: 2%;
+	margin-left: 20%;
+	padding:20px;
+
+}
+
 
 </style>
 </head>
@@ -81,10 +90,13 @@ button.btn-success {
 </nav>
 
 	<div class="row">
-	<div class="col-sm-6 col-md-5 col-lg-6"><h2>Michael Weitzman</h2>
+	<div class="col-sm-6 col-md-5 col-lg-6"><h2><?php foreach ($userinfo as $key => $value) {var_dump($value);}
+
+			echo $value['first_name']." ".$value['last_name']?>
+	</h2>
 		<p>Registerd at: February 2nd 2015</p>
 		<p>User ID: #1</p>
-		<p>Email address: mw@worldsourcetech.com</p>
+		<p>Email address: <?=$value['email'];?></p>
 		<p>I love it here</p>
 	</div>
 	  <div class="col-sm-6 col-md-5 col-md-offset-2 col-lg-6 col-lg-offset-10"></div>
@@ -99,49 +111,27 @@ button.btn-success {
 		 </div>
 	</div>
 	 	<div class="row">
-	 		 <div class="col-sm-6 col-md-6 col-lg-8 col-lg-offset-1"><a href="/users/show/">Matt Lastname wrote</a></div><div class="col-sm-6 col-md-4 col-lg-2"> 9 hours ago</div>
-	 		<div class="col-sm-6 col-md-12  col-lg-1 col-lg-offset-1 message">
-	 		This is my awesome message, it is so awesome
+	 		
+	 		<?php foreach ($userinfo as $key => $value) {
+
+	 			echo "<div class='col-sm-6 col-md-12  col-lg-1 col-lg-offset-1 message'>".$value['message']."</div>";}?>
 	 		</div>
 	 	</div>
-
-		 <div class="col-sm-6 col-md-6 col-lg-8 col-lg-offset-2"> <a href="/users/show/">Jimmy Jun commented"</a></div><div class="col-sm-6 col-md-4 col-lg-2"> 7 hours ago</div>
 		 <div class="col-sm-6 col-md-12  col-lg-10 col-lg-offset-2"><form action="/messages/new" method="post">
-		 	<br>This is my awesome comment to Matt's aweomse msg</br>
 		 </div>
 
-		 <div class="col-sm-6 col-md-12  col-lg-10 col-lg-offset-2"><form action="/messages/new" method="post">
+		 <?php foreach ($userinfo as $key => $value) {
+	 			echo "<div class='col-sm-6 col-md-12  col-lg-10 col-lg-offset-2'>".$value['comment']."</div>
+		 	";}?>
+		 	<div class='col-sm-6 col-md-12  col-lg-10 col-lg-offset-1 comment'>
 		 	<p><label for="message">Leave a comment</label></p>
+		 	<form action='/messages/new' method='post'>
 		 	<textarea name="message">Post your message here...</textarea>
 	 		<button type ="submit" name="message" value="Post" class="btn btn-success">Post</button>
 	 		<input type ="hidden" name ="msg" value="msgpost">
 	 	</form>
+	 	</div>
 		 </div>	
-
-		 	<div class="row">
-	 		 <div class="col-sm-6 col-md-6 col-lg-8 col-lg-offset-1"><a href="/users/show/">Casey Larue wrote</a></div><div class="col-sm-6 col-md-4 col-lg-2"> 9 minutes ago</div>
-	 		<div class="col-sm-6 col-md-12  col-lg-1 col-lg-offset-1 message">
-	 		This is my awesome message, it is so awesome
-	 		</div>
-	 	</div>
-
-		 <div class="col-sm-6 col-md-6 col-lg-8 col-lg-offset-2"> <a href="/users/show/">Paul Chino commented</a></div><div class="col-sm-6 col-md-4 col-lg-2"> 1 minute ago</div>
-		 <div class="col-sm-6 col-md-12  col-lg-10 col-lg-offset-2"><form action="/messages/new" method="post">
-		 	<br>This is my awesome comment to Matt's aweomse msg</br>
-		 </div> 
-
-		 <div class="col-sm-6 col-md-6 col-lg-8 col-lg-offset-2"> <a href="/users/show/">Michael Choi commented</a></div><div class="col-sm-6 col-md-4 col-lg-2"> 1 minute ago</div>
-		 <div class="col-sm-6 col-md-12  col-lg-10 col-lg-offset-2"><form action="/messages/new" method="post">
-		 	<br>Refactor your code dude!</br>
-		 </div>
-
-		 <div class="col-sm-6 col-md-12  col-lg-10 col-lg-offset-2"><form action="/messages/new" method="post">
-		 	<p><label for="message">Leave a comment</label></p>
-		 	<textarea name="message">Post your message here...</textarea>
-	 		<button type ="submit" name="message" value="Post" class="btn btn-success">Post</button>
-	 		<input type ="hidden" name ="msg" value="msgpost">
-	 	</form>
-		 </div>
 	</div>
 </div>
 </body>

@@ -1,4 +1,5 @@
-<?php ?>
+<?php  ?>
+
 <html>
 <head>
 	<title>Dashboard</title>
@@ -47,7 +48,7 @@
 		      </ul> -->
 		        </li>
 		      </ul>
-		      <p class="navbar-text navbar-right"><a href="/logoff/" class="navbar-link">Logoff</a></p>
+		      <p class="navbar-text navbar-right"><a href="logoff" class="navbar-link">Logoff</a></p>
 		    </div><!-- /.navbar-collapse -->
 		  </div><!-- /.container-fluid -->
 		</nav>
@@ -67,7 +68,7 @@
 				</thead>
 				<tr>
 					<td>1</td>
-					<td><a href="/users/show/">Michael Weitzman</a></td>
+					<td><a href="/users/show/4/">Michael Weitzman</a></td>
 					<td>michael.weitzman@wst.com</td>
 					<td>Feb. 2nd 2015</td>
 					<td>admin</td>
