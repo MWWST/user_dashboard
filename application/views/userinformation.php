@@ -114,14 +114,14 @@ button.btn-success {
 	 		
 	 		<?php foreach ($userinfo as $key => $value) {
 
-	 			echo "<div class='col-sm-6 col-md-12  col-lg-1 col-lg-offset-1 message'>".$value['message']."</div>";}?>
+	 			echo "<div class='col-sm-6 col-md-12  col-lg-1 col-lg-offset-1 message'>".$value['message']."Left by:".$value['message_sender_first'].$value['message_sender_last']."</div>";}?>
 	 		</div>
 	 	</div>
 		 <div class="col-sm-6 col-md-12  col-lg-10 col-lg-offset-2"><form action="/messages/new" method="post">
 		 </div>
 
 		 <?php foreach ($userinfo as $key => $value) {
-	 			echo "<div class='col-sm-6 col-md-12  col-lg-10 col-lg-offset-2'>".$value['comment']."</div>
+	 			echo "<div class='col-sm-6 col-md-12  col-lg-10 col-lg-offset-2'>".$value['comment']."Commented by: ".$value['comment_sender_first'].$value['comment_sender_last']."</div>
 		 	";}?>
 		 	<div class='col-sm-6 col-md-12  col-lg-10 col-lg-offset-1 comment'>
 		 	<p><label for="message">Leave a comment</label></p>
